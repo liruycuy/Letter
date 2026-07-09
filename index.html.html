@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untukmu</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Georgia, serif;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
+}
+
+.box{
+    width:90%;
+    max-width:650px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+input{
+    width:80%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin-top:15px;
+    font-size:16px;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#60a5fa;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#3b82f6;
+}
+
+#letter{
+    display:none;
+    text-align:left;
+    line-height:1.8;
+    animation:fade 1s;
+}
+
+h1{
+    text-align:center;
+}
+
+@keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<div id="login">
+<h2>📩 A Letter for You</h2>
+<p>Masukkan password untuk membacanya.</p>
+
+<input type="password" id="password" placeholder="Password">
+<br>
+<button onclick="checkPassword()">Buka Surat</button>
+
+<p id="error" style="color:#ff9b9b;"></p>
+</div>
+
+<div id="letter">
+<h1>Letter of apology</h1>
+
+<p>
+Halo Sar...
+</p>
+
+<p>
+Kalau kamu berhasil membuka suratnya I'm realy impressed... 
+pertama gua minta maaf kalau misalnya yang kemaren gua lakuin bikin lu risih, and I heard some news kalau lu dan dia lagi gak baik-baik aja dan tindakan
+yang gua lakuin malah memperparah hubungan kalian Im so so so soryy. Gua akuin itu kesalahan gua, gua yang seharusnya gak mengganggu hubungan kalian.
+But that day i want to tell you what i feel (gua seharusnya menahan perasaan itu) Maafin gua ya kalau gua ngeganggu kalian
+</p>
+
+<p>
+Makasih ya atas segalanya, meskipun kita gak berinteraksi tapi lu mengaruhi kehidupan gua tau selama SMA. Im sorry for everything
+and Im sorry for bothering you. I won't bother you anymore.
+</p>
+
+<p>
+Thank you for reading this message.
+</p>
+
+<p style="text-align:right;">
+— Goodluck Kuliahnya
+</p>
+
+</div>
+
+</div>
+
+<script>
+const PASSWORD = "Violet"; // Ganti password di sini
+
+function checkPassword(){
+    let input = document.getElementById("password").value;
+
+    if(input === PASSWORD){
+        document.getElementById("login").style.display="none";
+        document.getElementById("letter").style.display="block";
+    }else{
+        document.getElementById("error").innerHTML="Clue nama bunga di lagu Daniel.";
+    }
+}
+</script>
+
+</body>
+</html>
